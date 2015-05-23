@@ -26,4 +26,4 @@ all <- cbind(x_mean_sd,Y,subject);
 
 library(plyr);
 new_data <- ddply(all, .(Subject, Activity), function(e) colMeans(e[,1:66]));
-write.table(new_data, "averages_data.txt", row.name=FALSE);
+write.table(new_data, "new_data.txt", row.name=FALSE);
